@@ -1,0 +1,5 @@
+This project was a joint effort between Peter Episcopo, Kyle Healey, Olivia Lee, Eric Baker, and Jeff Cheng to create 
+a travel booking website for KPMG. It utilizes multiple APIs including Google Flights, Rome2Rio, Hotwire, OpenWeather, and Rioboard 
+to get flight, hotel, car, and train booking information from user entered search criteria. This booking information is stored in an Azure hosted SQL Database.
+In addition, personal user information is stored including user account type which is used to determine the functionality of the website upon login.
+For example, assistant user types have access to a drop down box on the login page which allows them to book for employees whom they are assistants of.

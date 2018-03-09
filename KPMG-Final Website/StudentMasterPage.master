@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="StudentMasterPage.master.cs" Inherits="StudentMasterPage" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+  <title>KPMG Travel Registration System</title>
+
+  <asp:ContentPlaceHolder ID="head" runat="server">
+
+  </asp:ContentPlaceHolder>
+
+    <link href="App_Themes/Baker/Content/Login.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/Baker/Content/NavCss.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="App_Themes/Baker/Images/Favicon.ico" />
+
+    <style type="text/css">
+        .auto-style1 {
+            background-color: #E7E7E7;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="form2" runat="server">
+    <div>
+        <!-- Header -->
+            <div class="navbar navbar-default HeaderOuterBg" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand">
+                            <img style="border-width: 0px;" alt="" src="App_Themes/Baker/Images/kpmgsmall2.png" /></a>                                  
+                        <div class="Navigation">
+                        <a style="margin-top:10px;" href="Logout.aspx" class="NavLink">
+                            <img src="App_Themes/Baker/Images/Logout.png" alt="Logout" style="height: 60px; width: 157px" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Header -->
+
+      <section id="MainContent">
+        <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
+        </asp:ContentPlaceHolder>
+      </section>
+
+    </div>
+  </form>
+</body>
+</html>

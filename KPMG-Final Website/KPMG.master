@@ -1,0 +1,153 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="KPMG.master.cs" Inherits="KPMG" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+  <title>KPMG Travel Registration System</title>
+
+  <asp:ContentPlaceHolder ID="head" runat="server">
+
+  </asp:ContentPlaceHolder>
+
+    <link href="App_Themes/Baker/Content/Login.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/Baker/Content/NavCss.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="App_Themes/Baker/Images/Favicon.ico" />
+
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en' },
+                'google_translate_element'
+            );
+
+            /*
+                To remove the "powered by google",
+                uncomment one of the following code blocks.
+                NB: This breaks Google's Attribution Requirements:
+                https://developers.google.com/translate/v2/attribution#attribution-and-logos
+            */
+
+            // Native (but only works in browsers that support query selector)
+            if (typeof (document.querySelector) == 'function') {
+                document.querySelector('.goog-logo-link').setAttribute('style', 'display: none');
+                document.querySelector('.goog-te-gadget').setAttribute('style', 'font-size: 0');
+            }
+
+            // If you have jQuery - works cross-browser - uncomment this
+            //jQuery('.goog-logo-link').css('display', 'none');
+            //jQuery('.goog-te-gadget').css('font-size', '0');
+        }
+    </script>
+
+    <style type="text/css">
+
+    @font-face{
+	font-family: 'aller';
+	src: url('fonts/Aller/Aller_Rg.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	}
+    body {background-image: url("App_Themes/Baker/Images/buildingbg.jpg");
+          background-repeat: no-repeat;
+          font-family: 'aller';
+          opacity: 0.86;
+    }
+
+    .navbar-header {
+        background-color: white;
+    }
+
+	.rounded-box {
+	background-color: white;
+    /*opacity: 0.8;*/
+	color: #000;
+	position: relative;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	padding: 10px 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+	input[type="submit"],
+	input[type="button"],
+	button {
+		border: 1px solid #a99f9a;
+        padding: 3px 8px;
+        background-color: white;
+        cursor: pointer;
+		font-size: small;
+		font-weight: 600;
+		margin-right: 6px;
+		width: auto;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+        font-family: 'aller';
+        margin-left: 22px;
+    }
+        .auto-style2 {
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="form2" runat="server">
+    <div>
+        <!-- Header -->
+            <div class="navbar navbar-default HeaderOuterBg" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand">
+                            <img style="border-width: 0px;" alt="" src="App_Themes/Baker/Images/kpmgsmall2.png" /></a>
+                        <div class="Navigation">
+                            <table class="auto-style2">
+                                <tr>
+                                    <td>
+                                        <asp:Button ID="NewBookingButton" runat="server" BorderColor="#0C2D84" ForeColor="#898989" Height="44px" Text="New Booking" Width="158px" OnClick="NewBookingButton_Click" />
+                                    </td>
+                                    <td>
+                                        <asp:Button ID="BookingsButton" runat="server" BorderColor="#0C2D84" ForeColor="#898989" Height="44px" Text="My Bookings" Width="158px" OnClick="BookingsButton_Click" />
+                                    </td>
+                                    <td>
+                                        <asp:Button ID="AccountButton" runat="server" BorderColor="#0C2D84" ForeColor="#898989" Height="44px" Text="My Account" Width="158px" OnClick="AccountButton_Click" />
+                                    </td>
+                                    <td>
+                                        <asp:Button ID="LogoutButton" runat="server" BackColor="#4D4D4D" BorderColor="#0C2D84" ForeColor="White" Height="44px" Text="Logout" Width="158px" OnClick="LogoutButton_Click" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;</td>
+                                    <td>
+                                        &nbsp;</td>
+                                    <td>
+                                        &nbsp;</td>
+                                    <td>
+                                        <span id="google_translate_element" style="text-align:center;"></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Header -->
+
+      <section id="MainContent">
+        <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
+        </asp:ContentPlaceHolder>
+      </section>
+
+    </div>
+  </form>
+</body>
+</html>
